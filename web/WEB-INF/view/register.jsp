@@ -28,7 +28,7 @@
 <body>
 <div>
     <div class="form">
-        <form method="post" action="register">
+        <form modelAttribute="user" method="post" action="register">
             <table>
                 <tr>
                     <h1 align="center">Register</h1>
@@ -58,7 +58,7 @@
                 </tr>
             </table>
             <br>
-            <input type="submit" value="Register" />
+            <input type="submit" value="Submit" />
         </form>
     </div>
 </div>
