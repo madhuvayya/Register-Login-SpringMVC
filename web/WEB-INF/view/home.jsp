@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: USER
+  User: Madhu
   Date: 6/28/2020
   Time: 10:08 AM
   To change this template use File | Settings | File Templates.
@@ -11,7 +11,7 @@
     <title>WelCome</title>
     <style>
       div{
-          text-size:1030px;
+          text-size:30px;
           background-color: #FFA500;
           text-align:center;
           width: 300px;
@@ -29,8 +29,13 @@
     <div>
       <br>
       <h1>Welcome</h1><br>
-      <a type="submit" style="font-family:verdana,serif" href="register.jsp">Register</a><br><br>
-      <a style="font-family:verdana,serif" href="login.jsp">Login</a>
+      <form method="get" action="register-page">
+          <input style="font-family:verdana,serif" type="submit" value="Register" />
+      </form>
+      <br>
+      <form method="get" action="login-page">
+        <input style="font-family:verdana,serif" type="submit" value="Login" />
+      </form>
     </div>
   </body>
 </html>
