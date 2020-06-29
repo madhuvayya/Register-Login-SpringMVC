@@ -11,12 +11,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
 public class Register {
 
-    ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
     @RequestMapping("/")
     public String home(){
@@ -28,10 +29,12 @@ public class Register {
         return "register";
     }
 
-    @RequestMapping("/register")
-    public void register(HttpServletRequest request,HttpServletResponse response, @ModelAttribute("user")User user){
+    @RequestMapping(value = "/register" , method = RequestMethod.POST)
+    public ModelAndView register(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("user")User user){
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         UserDao userDao = (UserDao) context.getBean("userDao");
         userDao.register(user);
+        return new ModelAndView("home","message","Successfully Registered Login");
     }
 
 }
