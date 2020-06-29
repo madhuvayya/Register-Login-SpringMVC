@@ -27,7 +27,6 @@
 </head>
 <body>
 <br>
-
 <div class="form">
     <form modelAttribute="login" method="post" action="login">
         <div style="color: #FF0000;">${message}</div>
