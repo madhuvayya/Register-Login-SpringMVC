@@ -34,7 +34,7 @@ public class Register {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         UserDao userDao = (UserDao) context.getBean("userDao");
         userDao.register(user);
-        return new ModelAndView("home","message","Successfully Registered Login");
+        return new ModelAndView("login","message","Successfully Registered");
     }
 
 }
