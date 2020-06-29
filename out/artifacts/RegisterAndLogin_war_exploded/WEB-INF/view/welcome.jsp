@@ -2,13 +2,13 @@
   Created by IntelliJ IDEA.
   User: USER
   Date: 6/29/2020
-  Time: 9:56 AM
+  Time: 11:12 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Welcome</title>
     <style>
         form{
             text-size:10px;
@@ -28,23 +28,16 @@
 <body>
 <br>
 <div class="form">
-    <form modelAttribute="login" method="post" action="login">
-        <div style="color: #FF0000;">${message}</div>
+    <form modelAttribute="login" method="post" action="logout">
         <table>
             <tr>
-                <h1 align="center">Login</h1>
+                <h1 align="center">Logout</h1>
             </tr>
             <tr>
-                <td>Email:</td>
-                <td><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required></td><br>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="password" placeholder="Password" required></td><br/>
+                <input type="submit" value="Logout" >
             </tr>
         </table>
         <br>
-        <input type="submit" value="Login" />
     </form>
 </div>
 </body>

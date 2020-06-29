@@ -22,11 +22,11 @@ public class Login {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         UserDao userDao = (UserDao) context.getBean("userDao");
         if(userDao.login(email, password)) {
+            modelMap.addAttribute("message", "Successfully logged in..");
             return "welcome";
         }
         modelMap.addAttribute("message", "Invalid Credentials");
         return "login";
     }
-
 
 }

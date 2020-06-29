@@ -28,6 +28,7 @@
   <body>
     <div>
       <br>
+      ${message}
       <h1>Welcome</h1><br>
       <form method="get" action="register-page">
           <input style="font-family:verdana,serif" type="submit" value="Register" />
