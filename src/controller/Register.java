@@ -1,9 +1,10 @@
 package controller;
 
+import model.User;
+import model.UserDao;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -20,8 +21,9 @@ public class Register {
     }
 
     @RequestMapping("/register")
-    public void register(){
-        //return ;
+    public void register(@ModelAttribute("user")User user){
+        UserDao userDao = new UserDao();
+        userDao.register(user);
     }
 
 }
