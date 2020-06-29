@@ -35,15 +35,15 @@
                 </tr>
                 <tr>
                     <td>First Name:</td>
-                    <td><input type="text" name="firstname" placeholder="Firstname" required></td>
+                    <td><input type="text" name="firstName" placeholder="Firstname" required></td>
                 </tr>
                 <tr>
                     <td>Last Name:</td>
-                    <td><input type="text" name="lastname" placeholder="Lastname" required></td>
+                    <td><input type="text" name="lastName" placeholder="Lastname" required></td>
                 </tr>
                 <tr>
                     <td>Phone No:</td>
-                    <td><input type="text" name="phonenumber" pattern="^[6789]{1}\d{9}$" placeholder="Phonenumber" required></td>
+                    <td><input type="text" name="phoneNumber" pattern="^[6789]{1}\d{9}$" placeholder="Phonenumber" required></td>
                 </tr>
                 <tr>
                     <td>Email ID:</td>

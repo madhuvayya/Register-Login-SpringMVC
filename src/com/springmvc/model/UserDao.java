@@ -1,12 +1,14 @@
-package model;
+package com.springmvc.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class UserDao {
 
-    @Autowired
     JdbcTemplate jdbcTemplate;
+
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     public void register(User user){
         String query="insert into user values('"+user.getFirstName()+"','"+user.getLastName()+"','"+user.getPhoneNumber()+"'," +
@@ -14,7 +16,5 @@ public class UserDao {
         jdbcTemplate.update(query);
     }
 
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
+
 }
