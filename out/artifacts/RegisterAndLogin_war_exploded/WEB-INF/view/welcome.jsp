@@ -26,12 +26,17 @@
     </style>
 </head>
 <body>
+<%
+    response.setHeader("cache-control","no-cache,no-store");
+%>
 <br>
-<div class="form">
+<div>
+
     <form modelAttribute="login" method="post" action="logout">
+        <div>${message}</div>
         <table>
             <tr>
-                <h1 align="center">Logout</h1>
+                <h1 align="center">Welcome</h1>
             </tr>
             <tr>
                 <input type="submit" value="Logout" >

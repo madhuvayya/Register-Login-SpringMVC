@@ -26,9 +26,13 @@
     </style>
 </head>
 <body>
+<%
+    response.setHeader("cache-control","no-cache,no-store");
+%>
 <div>
     <div class="form">
         <form modelAttribute="user" method="post" action="register">
+            <div>${message}</div>
             <table>
                 <tr>
                     <h1 align="center">Register</h1>

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>WelCome</title>
+    <title>home</title>
     <style>
       div{
           text-size:30px;
@@ -23,9 +23,18 @@
           top:20%;
           transform: translate(-50%, -50%);
       }
+
     </style>
+    <script type="text/javascript">
+      function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+    </script>
   </head>
   <body>
+  <%
+      response.setHeader("cache-control","no-cache,no-store");
+  %>
     <div>
       <br>
       ${message}

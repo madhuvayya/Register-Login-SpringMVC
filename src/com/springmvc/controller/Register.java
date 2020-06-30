@@ -1,13 +1,10 @@
 package com.springmvc.controller;
 
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.springmvc.model.User;
 import com.springmvc.model.UserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Register {
-
 
     @RequestMapping("/")
     public String home(){
@@ -30,10 +26,14 @@ public class Register {
     }
 
     @RequestMapping(value = "/register" , method = RequestMethod.POST)
-    public ModelAndView register(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("user")User user){
+    public ModelAndView register(@ModelAttribute("user")User user){
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         UserDao userDao = (UserDao) context.getBean("userDao");
-        userDao.register(user);
+        try {
+            userDao.register(user);
+        } catch (DuplicateKeyException exception) {
+            return new ModelAndView("login","message","You already registered");
+        }
         return new ModelAndView("login","message","Successfully Registered");
     }
 

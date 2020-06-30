@@ -26,21 +26,24 @@
     </style>
 </head>
 <body>
+<%
+    response.setHeader("cache-control","no-cache,no-store,must-revalidate");
+%>
 <br>
 <div class="form">
     <form modelAttribute="login" method="post" action="login">
-        <div style="color: #FF0000;">${message}</div>
+        <div>${message}</div>
         <table>
             <tr>
                 <h1 align="center">Login</h1>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required></td><br>
+                <td><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"  /></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="password" name="password" placeholder="Password" required></td><br/>
+                <td><input type="password" name="password" placeholder="Password" required></td>
             </tr>
         </table>
         <br>
