@@ -15,4 +15,5 @@ public class Logout {
         session.invalidate();
         return new ModelAndView("home","message","You successfully logged out.");
     }
+
 }

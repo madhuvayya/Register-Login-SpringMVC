@@ -9,21 +9,23 @@
 <html>
 <head>
     <title>Welcome</title>
-    <style>
-        form{
-            text-size:10px;
-            background-color: #FFA500;
-            text-align:center;
-            width: 300px;
-            padding: 50px;
-            margin: 20px;
-            display: inline-block;
-            position: absolute;
-            left: 50%;
-            top:30%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    <style><%@include file="/WEB-INF/view/style.css"%></style>
+
+<%--    <style>--%>
+<%--        form{--%>
+<%--            text-size:10px;--%>
+<%--            background-color: #FFA500;--%>
+<%--            text-align:center;--%>
+<%--            width: 300px;--%>
+<%--            padding: 50px;--%>
+<%--            margin: 20px;--%>
+<%--            display: inline-block;--%>
+<%--            position: absolute;--%>
+<%--            left: 50%;--%>
+<%--            top:30%;--%>
+<%--            transform: translate(-50%, -50%);--%>
+<%--        }--%>
+<%--    </style>--%>
 </head>
 <body>
 <%
@@ -33,10 +35,10 @@
     }
 %>
 <br>
-<div>
-
+<div class="div">
     <form method="post" action="logout">
-        <div>${message}</div>
+        <br/>
+        ${message}
         <table>
             <tr>
                 <h1 align="center">Welcome</h1>

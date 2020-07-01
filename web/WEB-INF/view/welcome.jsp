@@ -1,42 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: USER
-  Date: 6/29/2020
-  Time: 11:12 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Welcome</title>
     <style>
-        form{
-            text-size:10px;
-            background-color: #FFA500;
-            text-align:center;
-            width: 300px;
-            padding: 50px;
-            margin: 20px;
-            display: inline-block;
-            position: absolute;
-            left: 50%;
-            top:30%;
-            transform: translate(-50%, -50%);
-        }
+        <%@include file="/WEB-INF/view/style.css"%>
     </style>
 </head>
 <body>
 <%
-//    response.setHeader("cache-control","no-cache,no-store");
+    response.setHeader("cache-control","no-cache,no-store");
     if(session.getAttribute("email")==null) {
         response.sendRedirect("login");
     }
 %>
 <br>
-<div>
-
+<div class="div">
     <form method="post" action="logout">
-        <div>${message}</div>
+        <br/>
+        ${message}
         <table>
             <tr>
                 <h1 align="center">Welcome</h1>
