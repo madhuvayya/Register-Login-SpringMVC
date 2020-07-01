@@ -1,7 +1,7 @@
 package com.springmvc.controller;
 
 import com.springmvc.model.User;
-import com.springmvc.model.UserDao;
+import com.springmvc.dao.UserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.DuplicateKeyException;

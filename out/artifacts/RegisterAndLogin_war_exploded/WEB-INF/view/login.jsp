@@ -27,11 +27,11 @@
 </head>
 <body>
 <%
-    response.setHeader("cache-control","no-cache,no-store,must-revalidate");
+    //response.setHeader("cache-control","no-cache,no-store,must-revalidate");
 %>
 <br>
 <div class="form">
-    <form modelAttribute="login" method="post" action="login">
+    <form method="post" action="login">
         <div>${message}</div>
         <table>
             <tr>

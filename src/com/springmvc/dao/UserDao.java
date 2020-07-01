@@ -1,8 +1,8 @@
-package com.springmvc.model;
+package com.springmvc.dao;
 
+import com.springmvc.model.User;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.util.NestedServletException;
 
 import java.util.List;
 import java.util.Map;

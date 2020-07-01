@@ -27,17 +27,21 @@
 </head>
 <body>
 <%
-    response.setHeader("cache-control","no-cache,no-store");
+//    response.setHeader("cache-control","no-cache,no-store");
+    if(session.getAttribute("email")==null) {
+        response.sendRedirect("login");
+    }
 %>
 <br>
 <div>
 
-    <form modelAttribute="login" method="post" action="logout">
+    <form method="post" action="logout">
         <div>${message}</div>
         <table>
             <tr>
                 <h1 align="center">Welcome</h1>
             </tr>
+            <p>email:${email}</p>
             <tr>
                 <input type="submit" value="Logout" >
             </tr>

@@ -4,7 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.springmvc" />
+    <context:component-scan base-package="com.springmvc.*" />
     <context:property-placeholder location="db.properties" />
     <context:annotation-config />
 
@@ -20,7 +20,7 @@
         <property name="dataSource" ref="ds"/>
     </bean>
 
-    <bean id="userDao" class="com.springmvc.model.UserDao">
+    <bean id="userDao" class="com.springmvc.dao.UserDao">
         <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
 

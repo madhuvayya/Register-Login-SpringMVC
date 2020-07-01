@@ -25,15 +25,15 @@
       }
 
     </style>
-    <script type="text/javascript">
-      function preventBack() { window.history.forward(); }
-      setTimeout("preventBack()", 0);
-      window.onunload = function () { null };
-    </script>
+<%--    <script type="text/javascript">--%>
+<%--      function preventBack() { window.history.forward(); }--%>
+<%--      setTimeout("preventBack()", 0);--%>
+<%--      window.onunload = function () { null };--%>
+<%--    </script>--%>
   </head>
   <body>
   <%
-      response.setHeader("cache-control","no-cache,no-store");
+//      response.setHeader("cache-control","no-cache,no-store");
   %>
     <div>
       <br>

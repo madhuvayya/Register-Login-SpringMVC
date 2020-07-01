@@ -26,9 +26,9 @@
     </style>
 </head>
 <body>
-<%
-    response.setHeader("cache-control","no-cache,no-store");
-%>
+<%--<%--%>
+<%--    response.setHeader("cache-control","no-cache,no-store");--%>
+<%--%>--%>
 <div>
     <div class="form">
         <form modelAttribute="user" method="post" action="register">
